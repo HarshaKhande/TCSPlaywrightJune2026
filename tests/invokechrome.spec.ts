@@ -27,3 +27,4 @@ test('Invoke Chrome' , async({page}) => {
     expect(dashboardText).toBe('Swag Labs')
 
 });
+

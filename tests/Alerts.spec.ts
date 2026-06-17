@@ -7,45 +7,30 @@ test('Alerts Handling ' , async({page}) => {
     await page.goto('https://the-internet.herokuapp.com/javascript_alerts')
 
     //  simple alerts handling 
-
     await page.locator('button').filter({ hasText: 'Click for JS Alert' }).click();
-
     // switch the control to the alert 
-
     page.on('dialog' , async dialog =>{
         console.log(dialog.message());
 
-        // cliecking on ok button
+        // clicking on ok button
         await dialog.accept();
         
     });
-
      //  confirmational  alerts handling 
-
    await page.locator('button').filter({ hasText: 'Click for JS Confirm' }).click();
-
     // switch the control to the alert 
-
     page.on('dialog' , async dialog =>{
         console.log(dialog.message());
-
         // clicking on cancel  button
-        await dialog.dismiss();
-        
+        await dialog.dismiss();   
     });
-
      //  prompt  alerts handling 
-
    await page.locator('button').filter({ hasText: 'Click for JS Prompt' }).click();
-
     // switch the control to the alert 
-
     page.on('dialog' , async dialog =>{
         console.log(dialog.message());
-
         // clicking on cancel  button
         await dialog.accept('hello');
-
         await expect(page.locator("//p[@id='result']")).toHaveText('You entered: Hello');
         
     });

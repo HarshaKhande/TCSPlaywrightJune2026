@@ -19,10 +19,7 @@ test('Invoke Chrome' , async({page}) => {
 
     await expect(page.locator("input[value='radio3']")).toBeChecked();
 
-    // handling multple radio buttons 
-
 });
-
 test('Multiple radio button handling' , async({page}) => {
 
     // launching of the browser with the url 
