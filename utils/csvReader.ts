@@ -1,0 +1,14 @@
+// utils/csvReader.ts
+
+import * as fs from 'fs';
+import * as path from 'path';
+import { parse } from 'csv-parse/sync';
+
+export function readCsvData(filePath: string) 
+    {
+        const content = fs.readFileSync(path.resolve(filePath));
+        return parse(content, {
+        columns: true,
+        skip_empty_lines: true,
+        }) as Array<{ username: string; password: string }>;
+    }

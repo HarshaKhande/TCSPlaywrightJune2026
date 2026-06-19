@@ -8,7 +8,7 @@ test('Invoke Chrome' , async({page}) => {
 
     // click on radio button 
 
-    await page.locator('label').filter({ hasText: 'Radio2' }).click();
+    await page.locator('label').filter({ hasText: 'Radio' }).click();
 
     // verigfy that the radio button is clicked 
 
