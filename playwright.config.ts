@@ -23,8 +23,8 @@ export default defineConfig({
   workers:3,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [['html'],['allure-playwright']],
-  globalSetup:require.resolve('./global-setup'),
-  globalTeardown:require.resolve('./global-teardown'),
+  /*globalSetup:require.resolve('./global-setup'), */
+  /*globalTeardown:require.resolve('./global-teardown'), */
  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
