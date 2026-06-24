@@ -4,7 +4,8 @@ test('Trace enable at testcase level ', async ({ page, context }) => {
 
     // enable the tracing 
 
-await context.tracing.start({screenshots: true,snapshots: true});
+
+    await context.tracing.start({screenshots: true,snapshots: true});
 
 await page.goto('https://example.com');
 

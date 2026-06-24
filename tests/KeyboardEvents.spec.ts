@@ -23,10 +23,4 @@ test('Keyboard events' , async({page}) => {
     await page.mouse.down();
 
     await page.mouse.up();
-
-
-
-
-
-
 });

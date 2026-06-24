@@ -22,11 +22,17 @@ test('Navigational commands' , async({page, browser , context}) => {
 
     await page.close();
 
-    //Close entire browser
+    //Close entire browser -Closes all tabs and ends browser session.
 
     await browser.close();
 
+    //Closes all pages inside that context.
+
     await context.close();
 
+
+/*Selenium              Playwright
+driver.close()   →    page.close()
+driver.quit()    →    browser.close() */
 
 });

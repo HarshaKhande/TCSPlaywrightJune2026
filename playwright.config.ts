@@ -20,9 +20,11 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers:3,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [['html'],['allure-playwright']],
+  globalSetup:require.resolve('./global-setup'),
+  globalTeardown:require.resolve('./global-teardown'),
  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -32,6 +34,9 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'off',
     screenshot: 'on',
+    video:'on',
+     storageState:
+      './auth.json'
     
     
   },
@@ -44,9 +49,9 @@ export default defineConfig({
     },
 
    {
-    name: 'firefox',
+      name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
-    },
+      },
 
     //{
     //  name: 'webkit',
@@ -64,10 +69,10 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
+     {
+      name: 'Microsoft Edge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' },
+     },
     // {
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
