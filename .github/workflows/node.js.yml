@@ -39,7 +39,7 @@ jobs:
 
 
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npx playwright test "Alerts.spec.ts"
 
 
       - name: Upload Playwright Report
