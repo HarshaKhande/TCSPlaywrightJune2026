@@ -23,6 +23,12 @@
     expect(dashboardText).toBe('Swag Labs')
 
 
+ "jira": {
+      "type": "http",
+      "url": "https://mcp.atlassian.com/v2/mcp"
+    }
+
+
 Design and implement a modern, scalable, and modular test automation framework using Pkaywright and type script
 •	Adopt the Page Object Model (POM) design pattern for maintainability and reusability.
 •	Integrate logging utilities (e.g., Log4j2) and Excel-based test data reading capabilities.
