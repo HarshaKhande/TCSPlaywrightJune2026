@@ -21,3 +21,12 @@
     // assertion 
 
     expect(dashboardText).toBe('Swag Labs')
+
+
+Design and implement a modern, scalable, and modular test automation framework using Pkaywright and type script
+•	Adopt the Page Object Model (POM) design pattern for maintainability and reusability.
+•	Integrate logging utilities (e.g., Log4j2) and Excel-based test data reading capabilities.
+•	Include a comprehensive README and sample test scripts demonstrating framework usage.
+•	Maintain a clear separation between test data and business logic.
+•	Use  Excel and Playwright  MCP Servers for connecting to external tools
+
